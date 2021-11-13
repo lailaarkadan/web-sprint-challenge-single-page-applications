@@ -36,7 +36,7 @@ return (
             value={values.name}
             onChange={onChange}
           />
-      <label> Choice of Size
+      <label id='size-dropdown'> Choice of Size
 
         <select
         value={values.size}
@@ -154,7 +154,7 @@ return (
       />
       </label> 
       
-      <h2>Special Instructions</h2>
+      <h2 id='special-text'>Special Instructions</h2>
       <label> Anything else you'd like to add?
           <input
           type='text'
@@ -165,7 +165,7 @@ return (
       />
           </label>
  
-         <button className='submit-Order' disabled={disabled}>Submit Order</button>
+         <button className='pizza-form' disabled={disabled}>Submit Order</button>
     </div>
   </form>
 )
