@@ -5,7 +5,18 @@ import axios from 'axios'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Form from './Components/Form';
 import schema from './validation/formSchema';
+import styled from 'styled-components';
 
+const Title = styled.h1`
+font-size: 2em;
+    
+     width: 80%;
+     margin: 0 auto;
+     color: #4f0744;
+     font-family: 'Exo', sans-serif;
+     padding: 50px;
+     font-size: 65px;
+`;
 
 
 const initialValues = {
@@ -99,7 +110,7 @@ useEffect(() => {
     <Router>
     <div className="App">
       <nav>
-        <div className="header">Lambda Eats</div>
+        <Title className="header">Lambda Eats</Title>
         <Route path='/'> 
         <Link to='/'>Home</Link>
         </Route>

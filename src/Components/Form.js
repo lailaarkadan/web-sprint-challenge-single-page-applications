@@ -1,6 +1,21 @@
 import React from "react";
+import styled from 'styled-components';
 
+const Style = styled.div`
 
+display: flex;
+flex-direction: column;
+justify-content: center;
+border: solid black;
+margin-left: 20%;
+margin-right:20%;
+color: 
+purple;
+font-family: 'Exo', sans-serif;
+padding: 50px;
+
+      }
+`
 const Form =(props) => {
     const {values, change, submit , disabled, errors } = props;
     
@@ -19,7 +34,7 @@ const Form =(props) => {
 return (
    
    <form id='pizza-form' onSubmit={onSubmit}>
-    <div>
+    <Style>
       <h1>Build Your Own Pizza!</h1>
           <p>{errors.name}</p>
           <p>{errors.size}</p>
@@ -166,7 +181,7 @@ return (
           </label>
  
          <button className='pizza-form' disabled={disabled}>Submit Order</button>
-    </div>
+    </Style>
   </form>
 )
 }
