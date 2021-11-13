@@ -18,11 +18,24 @@ const Form =(props) => {
 
 return (
    
-   <form onSubmit={onSubmit}>
+   <form id='pizza-form' onSubmit={onSubmit}>
     <div>
       <h1>Build Your Own Pizza!</h1>
-      
-    
+          <p>{errors.name}</p>
+          <p>{errors.size}</p>
+          <p>{errors.sauce}</p>
+          <p>{errors.toppings}</p>
+          <p>{errors.crust}</p>
+          <p>{errors.instructions}</p>
+          
+          <label id ='name-input'>Name: </label>
+          <input 
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            value={values.name}
+            onChange={onChange}
+          />
       <label> Choice of Size
 
         <select
@@ -92,7 +105,7 @@ return (
         onChange={onChange}    
       />
       </label> 
-
+      
       <label>Artichoke Hearts
       <input
         type = "checkbox" 
@@ -140,6 +153,7 @@ return (
        onChange={onChange}    
       />
       </label> 
+      
       <h2>Special Instructions</h2>
       <label> Anything else you'd like to add?
           <input
@@ -151,7 +165,7 @@ return (
       />
           </label>
  
-         <button className='submitOrder' disabled={disabled}>Submit Order</button>
+         <button className='submit-Order' disabled={disabled}>Submit Order</button>
     </div>
   </form>
 )
